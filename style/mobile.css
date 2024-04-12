@@ -1,0 +1,286 @@
+@media screen and (max-width: 1200px) {
+    /*hometown*/
+    .hometown-WelcomeAndArchitecture{
+        min-height: 1400px;
+    }
+}
+@media screen and (max-width: 1000px) {
+    /*Navigation Bar*/
+    .NavigationBar{
+        padding: 0 2rem;
+    }
+    .nav-ToggleButton{
+        display: block;
+    }
+    .nav-Links{
+        display: none;
+    }
+    .nav-Check:checked ~ .nav-DropdownMenuDiv {
+        opacity: 1;
+        display: block;
+    }
+    .NavigationBar{
+        margin: 1rem 1rem;
+    }
+    /*Home*/
+    .home-QuotesDiv{
+        padding: 2rem;
+    }
+    .home-QuotesDiv h3{
+        font-size: 1.5rem;
+    }
+    .home-QuotesDiv blockquote{
+        font-size: 1rem;
+    }
+    .home-MyGalleryWall{
+        grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+        grid-template-rows: minmax(auto, auto);
+    }
+    .home-MyGalleryWall div{
+        grid-column: unset !important;
+        grid-row: unset !important;
+    }
+    /*Achievement*/
+    .achievement-Timeline{
+        margin: 2rem auto;
+    }
+    .achievement-Timeline::after{
+        left: 2rem;
+    }
+    .achievement-achievementBox{
+        width: 70%;
+        padding-left: 5rem;
+        padding-right: 1.2rem;
+    }
+    .achievement-achievementBoxRight{
+        left: 0;
+    }
+    .achievement-achievementBoxLeft .achievement-Logo, .achievement-achievementBoxRight .achievement-Logo{
+        left: .6rem;
+    }
+    .achievement-LeftArrowElement, .achievement-RightArrowElement{
+        border-right: 1rem solid rgb(40, 40, 40);
+        border-left: 0;
+        left: 4rem;
+    }
+    /*Swinburne*/
+    #swinburne-Card1Content h1{
+        font-size: 10vw;
+    }
+    .swinburne-Events{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .swinburne-EventCard:hover{
+        height: 40%;
+    }
+    .swinburne-TimetableMonday,.swinburne-TimetableTuesday, .swinburne-TimetableWednesday, #swinburne-TimetableNetwork
+    ,.swinburne-TimetableThursday,.swinburne-TimetableFriday, .swinburne-TimetableSaturday, #swinburne-TimetableProject
+    , #swinburne-TimetableVovinam,#swinburne-TimetableWebDev{
+        display: none;
+    }
+    #swinburne-TimetableRadio1:checked ~ table .swinburne-TimetableMonday, #swinburne-TimetableRadio2:checked ~ table .swinburne-TimetableTuesday,
+    #swinburne-TimetableRadio3:checked ~ table .swinburne-TimetableWednesday,#swinburne-TimetableRadio3:checked ~ table #swinburne-TimetableNetwork,
+    #swinburne-TimetableRadio4:checked ~ table .swinburne-TimetableThursday, #swinburne-TimetableRadio4:checked ~ table #swinburne-TimetableWebDev,
+    #swinburne-TimetableRadio5:checked ~ table .swinburne-TimetableFriday, #swinburne-TimetableRadio5:checked ~ table #swinburne-TimetableVovinam,
+    #swinburne-TimetableRadio6:checked ~ table .swinburne-TimetableSaturday,#swinburne-TimetableRadio6:checked ~ table #swinburne-TimetableProject{
+        display: table-cell;
+    }
+    #swinburne-NavigationTimetable{
+        display: table-cell;
+    }
+    #swinburne-Card4 th{
+        text-align: center;
+    }
+    /*Hometown*/
+    .hometown-HeaderText h2{
+        font-size: 1rem;
+    }
+    .hometown-WelcomeAndArchitecture{
+        min-height: 1900px;
+    }
+    .hometown-FoodandFact{
+        padding: 5rem 6rem;
+    }
+    .hometown-HCMFoodContainer img{
+        width: 25vw;
+    }
+    .hometown-MasonaryBoxDiv{
+        grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+        grid-template-rows: minmax(auto, auto);
+    }
+    .hometown-TipBox{
+        grid-column: unset !important;
+        grid-row: unset !important;
+    }
+    /*footer*/
+    footer{
+        bottom: unset;
+    }
+    .footer-Column{
+        flex-basis: 30%;
+    }
+}
+@media screen and (max-width: 500px) {
+    html{
+        font-size: 12px;
+    }
+    /*Home*/
+    .home-AboutMeImageDiv{
+        width: 80vw;
+        margin-bottom: 1rem;
+        display: block;
+    }
+    .home-AboutMeImage{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+    .home-AboutMeInformationDiv{
+        margin-right: 0;
+    }
+    .home-WelcomeText{
+        align-self: center;
+        margin-left: 0;
+    }
+    .home-WelcomeText h1{
+        font-size: 2rem;
+    }
+    .home-WelcomeText h2{
+        font-size: 1rem;
+    }
+    .home-AboutMe{
+        flex-direction: column;
+        align-items: center;
+    }
+    .home-AboutMeImage{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .home-AboutMeSkillPer::before{
+        display: none;
+    }
+    .home-AboutMeSkillPer::after{
+        display: none;
+    }
+    .home-FavouriteBookFilmCard{
+        width: 80%;
+    }
+    .home-FavouriteBookFilmCards{
+        padding-inline: 0rem;
+    }
+    /*Swinburne*/
+    .swinburne-EventInformation>ion-icon{
+        display: none;
+    }
+
+    #swinburne-Card2>h3{
+        text-align: center;
+    }
+    .swinburne-EventCard:hover{
+        height: 40%;
+    }
+    .swinburne-Events{
+        gap: .5rem;
+    }
+    .swinburne-EventCard p{
+        font-size: .8rem;
+    }
+    /*Hometown*/
+    .hometown-Header{
+        height: 100vh;
+    }
+
+    .hometown-Quotes{
+        margin-inline: 2rem;
+    }
+    .hometown-WelcomeAndArchitecture aside{
+        display: none;
+    }
+    .hometown-WelcomeAndArchitecture{
+        display: block;
+        width: 100%;
+        min-height: 1000px;
+    }
+    .hometown-Welcome{
+        padding: 5rem 2rem;
+        flex-direction: column;
+    }
+    .hometown-WelcomeText2{
+        padding-left: 0;
+        border-left: none;
+        align-self: center;
+    }
+    .hometown-WelcomeText1{
+        width: 100%;
+        padding-right: 0;
+    }
+    .hometown-WelcomeText1 h3{
+        font-size: 2rem;
+    }
+    .hometown-Architecture h3{
+        padding: 1rem;
+        text-align: center;
+    }
+    .hometown-ImageMapList{
+        display: block;
+    }
+    .hometown-ImageMap{
+        justify-content: flex-start;
+    }
+    .hometown-FoodandFact{
+        padding: 5rem 3rem;
+    }
+    .hometown-FoodLeadingLine{
+        display: none;
+    }
+    .hometown-HCMFoodContainer{
+        flex-direction: column;
+    }
+    .hometown-HCMFoodContainer img{
+        width: 20rem;
+    }
+    .hometown-Tips h3{
+        text-align: left;
+    }
+    .hometown-SeeYouAgain h3{
+        text-align: center;
+        font-size: 2rem;
+    }
+    /*Animation*/
+    .animation-ListAnimation section:nth-child(n){
+        text-align: center;
+    }
+    /*Footer*/
+    footer{
+        bottom: unset;
+    }
+    .footer-Column{
+        flex-basis: 100%;
+    }
+}
+@media screen and (max-width: 350px) {
+    html{
+        font-size: 8px;
+    }
+    .nav-TextLogo{
+        display: none;
+    }
+    .hometown-WelcomeAndArchitecture{
+        min-height: 700px;
+    }
+    .hometown-FoodandFact{
+        padding: 5rem 1rem;
+    }
+    .hometown-HCMFoodContainer img{
+        width: 10rem;
+    }
+    .hometown-HeaderBanhMi{
+        bottom: 48%;
+    }
+    .home-FavouriteBookFilmCards{
+        display: flex;
+        flex-direction: column;
+    }
+}

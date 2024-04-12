@@ -1,0 +1,1874 @@
+html{
+    font-size: 16px;
+    color: white;
+    background-color: #1D1F1E;
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+h1,h2,h3,h4,h5{
+    font-family: Poppins, sans-serif;
+}
+#homePage h3{
+    width: fit-content;
+}
+#homePage h3, #swinburnePage h3{
+    font-size: 3rem;
+    background: linear-gradient(90deg, #C4C3B3,#8E8B70);
+    background-clip: text;
+    color: transparent;
+}
+/*******************/
+/*Navigation Bar*/
+/*******************/
+.NavigationBarDiv{
+    position: sticky;
+    top: .7rem;
+    z-index: 100;
+}
+.NavigationBar{
+    position: absolute;
+    right: 5%;
+    left: 5%;
+    background-color: rgba(193, 193, 193, 0.2);
+    backdrop-filter: blur(100px);
+    height: 3.5rem;
+    margin: 1rem 1rem;
+    padding: 0 5rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.nav-Links{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+.nav-Links a, .nav-DropdownMenu a{
+    text-decoration: none;
+    font-size: 1rem;
+    color: white;
+    text-transform: uppercase;
+    transition: all .4s ease-in-out;
+}
+.nav-Links a:hover, .nav-DropdownMenu a:hover{
+    background-color: white;
+    color: black;
+    padding: .5rem;
+    border-radius: .5rem;
+}
+.nav-Logo img{
+    width: 3rem;
+    height: auto;
+}
+.nav-TextLogo{
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    font-family: "Poppins", sans-serif;
+}
+.nav-Logo{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.nav-CheckButton{
+    color: white;
+    cursor: pointer;
+}
+.nav-ToggleButton{
+    display: none;
+}
+.nav-Check{
+    display: none;
+}
+.nav-DropdownMenuDiv{
+    position: absolute;
+    right: .2rem;
+    top: 4.5rem;
+    opacity: 0;
+    color: white;
+    background-color: rgba(70, 70, 70, 0.5);
+    backdrop-filter: blur(100px);
+    text-align: center;
+    padding: 1rem;
+    border-radius: 1vw;
+    display: none;
+    transition: opacity .3s;
+}
+.nav-DropdownMenu{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+/*******************/
+/*Home Page*/
+/*******************/
+/*Welcome Part*/
+.home-WelcomeDiv{
+    position: relative;
+    max-width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url(images/Home/home-Gif.gif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.home-WelcomeDiv img{
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    filter: blur(1px);
+    overflow: visible;
+}
+.home-WelcomeText{
+    color: white;
+    font-family: Poppins, sans-serif;
+    z-index: 1;
+    align-self: flex-start;
+    margin-left: 10vw;
+}
+.home-WelcomeText h1{
+    padding: 0;
+    margin: 0;
+    font-size: 3rem;
+}
+.home-WelcomeDiv span{
+    position: relative;
+}
+.home-WelcomeDiv span::before{
+    content: "Toan Truong";
+    background: linear-gradient(90deg, #C4C3B3,#8E8B70);
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 80px #e5e8ff;
+    width: 100%;
+    animation: home-Words 8s infinite;
+
+}
+@keyframes home-Words {
+    0% ,30%{
+        content: "Toan Truong";
+    }
+    30% ,55%{
+        content: "MTOAN";
+    }
+    55% ,75%{
+        content: "Trum";
+    }
+    75% ,100%{
+        content: "Jimmy";
+    }
+}
+/*Quotes of Me*/
+.home-QuotesDiv{
+    background-color: #2A2B2A;
+    text-align: center;
+    padding: 5vw;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+.home-QuotesDiv h3{
+    margin: auto;
+}
+.home-QuotesDiv blockquote{
+    font-size: 1.5rem;
+    max-width: 100rem;
+    margin: auto;
+    padding: 1rem;
+}
+.home-3DotGradientAnimation{
+    position: absolute;
+    inset: 0;
+    justify-content: center;
+    display: inline-flex;
+    flex-direction: row;
+    z-index: 0;
+    height: 50vh;
+}
+.home-3DotGradientAnimationJustifyCenter{
+    justify-content: center;
+    align-items: center;
+}
+.home-GradientShape1{
+    width: 30vw;
+    height: 30vw;
+    border-radius: 9999px;
+    position: relative;
+    animation: GradientAnimation1 10s infinite;
+    z-index: 0;
+}
+.home-GradientShape2{
+    width: 20vw;
+    height: 20vw;
+    border-radius: 9999px;
+    position: relative;
+    animation: GradientAnimation2 10s infinite;
+    z-index: 0;
+}
+
+@keyframes GradientAnimation1{
+    0%{left: 0px; top:0px;}
+    25%{left: -100px; top: 70px;}
+    50%{left: 20px; top: 150px;}
+    75%{left: 50px; top: 150px;}
+    100%{left: 0px; top: 0px;}
+}
+@keyframes GradientAnimation2{
+    0%{left: 0px; top:0px;}
+    25%{left: 50px; top: 10px;}
+    50%{left: 100px; top: 50px;}
+    75%{left: 50px; top: 100px;}
+    100%{left: 0px; top: 0px;}
+}
+.home-GradientAdjust{
+    opacity: .5;
+    filter: blur(30px);
+}
+.home-GradientPrimary{
+    background-color: rgb(164, 164, 164);
+}
+.home-GradientTeal{
+    background-color:rgb(132, 42, 60) ;
+}
+.home-GradientPurple{
+    background-color: rgb(28, 41, 107);
+}
+/*About Me*/
+.home-AboutMe{
+    display: flex;
+    margin: 5vw 0;
+}
+.home-AboutMe h3{
+    margin-top: 0;
+}
+.home-AboutMeImageDiv{
+    width: 40vw;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.home-BackgroundAboutMeImage{
+    position: relative;
+    margin-top: 9.3%;
+    margin-left: 10vw;
+    width: 50%;
+    padding-top: 50%;
+    border-top-left-radius: 500px;
+    border-top-right-radius: 500px;
+    background: linear-gradient(to right,#a92e2e, #322699, #5c86e1, #ff9671, #ffc75f, #f9f871);
+    background-size: 300%;
+    background-position: left;
+    transition: background-position 3s;
+}
+.home-BackgroundAboutMeImage:hover{
+    background-position: right;
+}
+.home-AboutMeInformationDiv{
+    width: 60%;
+    margin-right: 10vw;
+}
+.home-AboutMeInformationDiv p{
+    text-align: justify;
+    line-height: 1.3rem;
+}
+.home-AboutMeInformationDiv h3{
+    margin-bottom: 1.2rem;
+}
+.home-AboutMeImage{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    flex-shrink: 0;
+}
+.home-AboutMeSkillsDiv{
+    width: 100%;
+    padding: 0 0;
+    margin: 1.2rem 0;
+}
+.home-AboutMeSkillBar{
+    height: 1rem;
+    background: #282828;
+    border-radius: .1rem;
+    margin: .5rem 0;
+}
+.home-AboutMeSkillPer{
+    height: 1rem;
+    background: #322699;
+    border-radius: .1rem;
+    position: relative;
+}
+.home-AboutMeSkillPer::before{
+    content: "";
+    position: absolute;
+    padding: .1rem .3rem;
+    top: -2rem;
+    background: white;
+    color: black;
+    right: 0;
+    border-radius: .3rem;
+    font-size: .9rem;
+    
+}
+#home-AboutMeSkillPerCom::before{
+    content: "90%";
+}
+#home-AboutMeSkillPerTW::before{
+    content: "60%";
+}
+#home-AboutMeSkillPerLS::before{
+    content: "80%";
+}
+.home-AboutMeSkillPer::after{
+    content: "";
+    position: absolute;
+    width: .6rem;
+    height: .6rem;
+    background: white;
+    top: -1rem;
+    right: 1rem;
+    border-radius: 5rem;
+}
+#home-AboutMeSkillPerLS{
+    max-width: 80%;
+}
+#home-AboutMeSkillPerTW{
+    max-width: 60%;
+}
+#home-AboutMeSkillPerCom{
+    max-width: 90%;
+}
+.home-AboutMeDownloadCVDiv{
+    width: fit-content;
+    background: none;
+    border: 2px solid white;
+    border-radius: 6px;
+    font-family: "Poppins";
+    padding: .5rem 2rem;
+    cursor: pointer;
+    transition: color 0.4s linear;
+    position: relative;
+}
+.home-AboutMeDownloadCVDiv a{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+}
+.home-AboutMeDownloadCVDiv::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 105%;
+    border-radius: 3px;
+    background: linear-gradient(90deg,#4568dc, #b06ab3);
+    z-index: -1;
+    transition: transform 0.5s;
+    transform-origin: 0 0;
+    transition-timing-function: cubic-bezier(0.5,1.6,0.4,0.7);
+    transform: scaleX(0);
+
+}
+.home-AboutMeDownloadCVDiv:hover::before{
+    transform: scaleX(1);
+}
+.home-AboutMeHoverMe{
+    position: absolute;
+}
+/*Three Version of Mine*/
+.home-ThreeVersionOfMyselfGreyBackground{
+    padding: .5rem 0;
+}
+.home-ThreeVersionOfMyselfDiv{
+    margin: 3vw;
+}
+.home-ThreeVersionOfMyselfDiv h3{
+    margin: auto;
+}
+.home-VersionList{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15.5rem, 1fr));
+    grid-gap: 2.5rem;
+    margin-top: 1rem;
+}
+.home-Version{
+    border-radius: .7rem;
+    position: relative;
+    overflow: hidden;
+}
+.home-Version img{
+    width: 100%;
+    border-radius: .7rem;
+    display: block;
+    transition: transform 0.5s;
+}
+.home-VersionDescription{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), #545242);
+    border-radius: .7rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    transition: height 0.5s;
+}
+.home-Version:hover img{
+    transform: scale(1.1);
+}
+.home-Version:hover .home-VersionDescription{
+    height: 100%;
+}
+.home-Version:hover .home-VersionDescripTionSkillPer{
+    animation: home-AnimationFillBar .8s ease-in;
+}
+.home-VersionDescriptionSkills{
+    width: 80%;
+    padding: 0 0;
+    margin: 1.2rem 0;
+}
+.home-VersionDescriptionSkillBar{
+    height: 1rem;
+    background: #282828;
+    border-radius: .1rem;
+    margin: .5rem 0;
+}
+.home-VersionDescripTionSkillPer{
+    height: 1rem;
+    background: #a92e2e;
+    border-radius: .1rem;
+    position: relative;
+}
+@keyframes home-AnimationFillBar {
+    from{
+        width: 0%;
+    }
+    to{
+        width: 100%;
+    }
+}
+#home-VersionDescripTionSkillPerHS1{
+    max-width: 80%;
+}
+#home-VersionDescripTionSkillPerFL1{
+    max-width: 100%;
+}
+#home-VersionDescripTionSkillPerADT1{
+    max-width: 30%;
+}
+#home-VersionDescripTionSkillPerHS2{
+    max-width: 100%;
+}
+#home-VersionDescripTionSkillPerFL2{
+    max-width: 70%;
+}
+#home-VersionDescripTionSkillPerADT2{
+    max-width: 70%;
+}
+#home-VersionDescripTionSkillPerHS3{
+    max-width: 30%;
+}
+#home-VersionDescripTionSkillPerFL3{
+    max-width: 30%;
+}
+#home-VersionDescripTionSkillPerADT3{
+    max-width: 100%;
+}
+.home-VersionDescription span{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.home-VersionDescription h4{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+/*LITERACY AND CINEMATIC TREASURES*/
+.home-FavouriteBookFilmSection{
+    background: #2A2B2A;
+}
+.home-FavouriteBookFilm{
+    max-width: 100rem;
+    margin-inline: auto;
+    padding: 2rem;
+}
+.home-FavouriteBookFilm h3{
+    text-align: center;
+    width: fit-content;
+    margin-inline: auto;
+    margin-top: 0;
+    padding-inline: 5rem;
+}
+.home-FavouriteBookFilmCards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-gap: 1rem;
+    padding-inline: 1rem;
+    place-items: center;
+}
+.home-FavouriteBookFilmCard{
+    width: 70%;
+    height: 20rem;
+    perspective: 1000px;
+
+}
+.home-FavouriteBookFilmCardInner{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1.5s;
+
+}
+.home-FavouriteBookFilmCard:hover .home-FavouriteBookFilmCardInner{
+    transform: rotateY(180deg);
+}
+.homeFavouriteBookFilmCardFrontContent, .homeFavouriteBookFilmCardBackContent{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.homeFavouriteBookFilmCardFront h4{
+    text-align: center;
+    font-size: 3rem;
+    margin-block: 1rem;
+}
+.homeFavouriteBookFilmCardFront ion-icon{
+    font-size: 1.5rem;
+    opacity: 0.5;
+}
+.homeFavouriteBookFilmCardFront, .homeFavouriteBookFilmCardBack{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+.homeFavouriteBookFilmCardBackContent h5{
+    font-size: 1.5rem;
+    margin: 0;
+}
+.homeFavouriteBookFilmCardFront{
+    transform: rotateY(0deg);
+    background: #545242;
+    border-radius: 1rem;
+}
+.homeFavouriteBookFilmCardBack{
+    transform: rotateY(180deg);
+    background: rgb(71, 104, 53);
+    border-radius: .8rem;
+}
+/*My Gallery*/
+.home-MyGallerySection{
+    margin-inline: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: .8rem;
+}
+.home-MyGallerySection h3{
+    margin-block: 1rem;
+}
+.home-MyGalleryWall img{
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    display: inline-block;
+}
+.home-MyGalleryWall div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home-MyGalleryWall>div>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: .3rem;
+}
+.home-MyGalleryWall>div>p{
+    position: absolute;
+    font-size: 2.3rem;
+    font-family: Poppins, sans-serif;
+    display: none;
+    color: #ffffff;
+}
+.home-MyGalleryWall>div>img:hover{
+    filter: grayscale(1) brightness(0.5);
+}
+.home-MyGalleryWall>div>img:hover + p {
+    display: block;
+}
+.home-MyGalleryWall{
+    display: grid;
+    width: 100%;
+    grid-gap: 1rem;
+    max-width: 70rem;
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+    grid-template-rows: minmax(7rem, auto);
+    grid-auto-flow: dense;
+}
+.home-MyGalleryWall>.home-MyGalleryWallWideIMG{
+    grid-column: span 2;
+}
+.home-MyGalleryWall>.home-MyGalleryWallTallIMG{
+    grid-row: span 2;
+}
+.home-MyGalleryWall>.home-MyGalleryWallBigIMG{
+    grid-column: span 2;
+    grid-row: span 2;
+}
+/*******************/
+/*Achievement Page*/
+/*******************/
+/*Timeline*/
+.achievement-Header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.achievement-Header img{
+    width: 100%;
+}
+.achievement-Header h1{
+    padding-top: 1rem;
+    padding-inline: 1rem;
+    position: absolute;
+    text-align: center;
+    background: linear-gradient(90deg, #C4C3B3,#8E8B70);
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 40px #e5e8ff;
+}
+.achievement-Timeline h2{
+    background: linear-gradient(90deg, #C4C3B3,#8E8B70);
+    background-clip: text;
+    color: transparent;
+    font-size: 1.3rem;
+    margin-bottom: 0rem;
+}
+.achievement-Timeline h3{
+    display: inline-block;
+    font-size: .9rem;
+    font-style: italic;
+    padding: 0;
+    margin: .5rem 0 0 0;
+}
+.achievement-Timeline{
+    position: relative;
+    max-width: 60rem;
+    margin: 2rem auto 6rem auto;
+}
+.achievement-achievementBox{
+    padding: .5rem 3rem;
+    position: relative;
+    width: 40%;
+    animation: achievementBoxMoving 1s linear forwards;
+    opacity: 0;
+}
+@keyframes achievementBoxMoving{
+    0%{
+        opacity: 1;
+        transform: translateY(-1.2rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.achievement-achievementBox:nth-child(1){
+    animation-delay: 0s;
+}
+.achievement-achievementBox:nth-child(2){
+    animation-delay: 1s;
+}
+.achievement-achievementBox:nth-child(3){
+    animation-delay: 2s;
+}
+.achievement-achievementBox:nth-child(4){
+    animation-delay: 3s;
+}
+.achievement-achievementBox:nth-child(5){
+    animation-delay: 4s;
+}
+.achievement-achievementBox:nth-child(6){
+    animation-delay: 5s;
+}
+.achievement-achievementBox:nth-child(7){
+    animation-delay: 6s;
+}
+.achievement-achievementBox:nth-child(8){
+    animation-delay: 7s;
+}
+.achievement-achievementBox:nth-child(9){
+    animation-delay: 8s;
+}
+.achievement-achievementBox:nth-child(10){
+    animation-delay: 9s;
+}
+.achievement-TextBox{
+    padding: 1rem 2rem;
+    background: rgb(40, 40, 40);
+    position: relative;
+    border-radius: .5rem;
+}
+.achievement-achievementBoxLeft{
+    left: 0%;
+}
+.achievement-achievementBoxRight{
+    left: 50%;
+}
+.achievement-Logo{
+    position: absolute;
+    width: 2rem;
+    right: -1.5rem;
+    top: 2rem;
+    z-index: 5;
+    background: white;
+    padding: .5rem;
+    border-radius: 50%;
+}
+.achievement-achievementBoxRight .achievement-Logo{
+    left: -1.5rem;
+}
+.achievement-Timeline::after{
+    content: '';
+    position: absolute;
+    width: .4rem;
+    height: 100%;
+    background: white;
+    top: 0;
+    left: 50%;
+    margin-left: -.1rem;
+    z-index: -1;
+    animation: achievementTimelineMoving 9s linear forwards;
+}
+@keyframes achievementTimelineMoving {
+    0%{
+        height: 0%;
+    }
+    100%{
+        height: 100%;
+    }
+}
+.achievement-LeftArrowElement{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 2.5rem;
+    z-index: 1;
+    border-top: 1rem solid transparent;
+    border-bottom: 1rem solid transparent;
+    border-left: 1rem solid rgb(40, 40, 40);
+    right: 2rem;
+}
+.achievement-RightArrowElement{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 2.5rem;
+    z-index: 1;
+    border-top: 1rem solid transparent;
+    border-bottom: 1rem solid transparent;
+    border-right: 1rem solid rgb(40, 40, 40);
+    left: 2rem;
+}
+.achievement-Timeline ul{
+    padding: 1rem;
+    list-style-type:square;
+}
+.achievement-Timeline ol{
+    padding: 1rem 1rem 0 1rem;
+}
+.achievement-PresidentIMG{
+    width: 100%;
+    border-radius: .5rem;
+}
+.achievement-LeaderPhotoGallery{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+    border-radius: .5rem;
+    margin-bottom: 1rem;
+}
+.achievement-LeaderPhotoGallery img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.achievement-LeaderPhotoGallery img:nth-child(1){
+    grid-row: span 2;
+}
+/*******************/
+/*Swinburne Page*/
+/*******************/
+.swinburne-Card{
+    width: 100%;
+    
+    background: grey;
+    position: sticky;
+    top: 0;
+}
+#swinburne-Card1 img{
+    position: absolute;
+    left: 0;
+    top: 0; 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.2);
+    z-index: 1;
+}
+#swinburne-Card1Content{
+    position: absolute;
+    left: 0;
+    top: -5%;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#swinburne-Card1Content h1{
+    background: linear-gradient(90deg, #cb2d3e, #ef473a);
+    background-clip: text;
+    color: transparent;
+    font-size: 5rem;
+    margin-bottom: 0;
+}
+#swinburne-ScrollNotification{
+    position: absolute;
+    left: 0;
+    top: 30%;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0.5;
+}
+#swinburne-Card1{
+    height: 100vh;
+}
+#swinburne-Card2{
+    background: linear-gradient(135deg, #200122, #6f0000);
+    height: 125vh;
+    padding-block: 20vh;
+}
+#swinburne-Card2 h3{
+    margin-bottom: 0;
+}
+#swinburne-Card3{
+    background: linear-gradient(45deg,#232526,#2b2c2d);
+    height: 100vh;
+}
+#swinburne-Card4{
+    background: #1D1F1E;
+}
+#swinburne-ScrollNotification p{
+    font-size: 1.2rem;
+    margin-bottom: .5rem;
+}
+#swinburne-ScrollNotification ion-icon{
+    font-size: 1.5rem;
+}
+/*Event in Swinburne*/
+.swinburne-EventCard>img{
+    width: 100%;
+    border-radius: .7rem;
+    display: block;
+    filter: brightness(0.2);
+}
+.swinburne-EventInformation>ion-icon{
+    font-size: 2rem;
+    position: absolute;
+    right: 2rem;
+    top: 1.5rem;
+    opacity: 1;
+    transition: opacity 0.2s linear;
+}
+.swinburne-Events{
+    height: 50%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2.5rem;
+    margin-top: .5rem;
+    margin-inline: 5rem;
+}
+.swinburne-EventCard{
+    height: 5rem;
+    transition: height .5s linear;
+}
+.swinburne-EventInformation{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.8);
+    transition: all 0.5s;
+}
+.swinburne-EventInformation>p{
+    opacity: 0;
+    padding-inline: 1rem;
+    transition: opacity .5s linear;
+    transition-delay: .3s;
+}
+.swinburne-EventInformation h4{
+    margin-top: 1.5rem;
+    margin-left: 1.2rem;
+    font-size: 1.5rem;
+    margin-bottom: 0;
+}
+.swinburne-EventCard:hover .swinburne-EventInformation{
+    height: 100%;
+    background-color: transparent;
+}
+.swinburne-EventCard:hover .swinburne-EventInformation>p{
+    opacity: 1;
+}
+.swinburne-EventCard:hover{
+    height: 70%;
+}
+.swinburne-EventCard:hover .swinburne-EventInformation>ion-icon{
+    opacity: 0;
+}
+.swinburne-EventCard{
+    border-radius: .7rem;
+    position: relative;
+    overflow: hidden;
+}
+#swinburne-Card2>p{
+    padding-inline: 10%;
+    text-align: center;
+}
+#swinburne-Card2>h3{
+    padding: 1rem;
+    text-align: center;
+    margin-top: 0;
+    background: linear-gradient(90deg, #C4C3B3,#8E8B70);
+    background-clip: text;
+    color: transparent;
+}
+/*Friend*/
+.swinburneCard3Header{
+    text-align: center;
+    padding-top: 8vh;
+    position: absolute;
+    top: -20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.swinburne-Card3Div{
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.swinburneCard3Header h3{
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.swinburneCard3Header p{
+    margin-top: 0;
+}
+.swinburne-FriendImageSlider{
+    min-width: 20rem;
+    max-width: 30rem;
+    overflow: hidden;
+    position: absolute;
+    top: 15rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.swinburne-FriendDot{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+.swinburne-Dot{
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    margin: 6px;
+    cursor: pointer;
+}
+.swinburne-Dot:hover{
+    background-color: white;
+}
+.swinburne-FriendRadio{
+    position: absolute;
+    visibility: hidden;
+}
+.swinburne-FriendImages{
+    width: 400%;
+    height: 100%;
+    display: flex;
+}
+.swinburne-FriendImage{
+    width: 25%;
+    height: 100%;
+    transition: 0.6s;
+    border-radius: 1rem;
+}
+.swinburne-FriendImage img{
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+}
+#swinburne-FriendRadio1:checked~ .swinburne-FriendImages .swinburne-FriendImage1{
+    margin-left: 0;
+}
+#swinburne-FriendRadio2:checked~.swinburne-FriendImages .swinburne-FriendImage1{
+    margin-left: -25%;
+}
+#swinburne-FriendRadio3:checked~.swinburne-FriendImages .swinburne-FriendImage1{
+    margin-left: -50%;
+}#swinburne-FriendRadio4:checked~.swinburne-FriendImages .swinburne-FriendImage1{
+    margin-left: -75%;
+}
+#swinburne-FriendRadio1:checked~.swinburne-FriendDot #swinburne-Dot1,
+#swinburne-FriendRadio2:checked~.swinburne-FriendDot #swinburne-Dot2,
+#swinburne-FriendRadio3:checked~.swinburne-FriendDot #swinburne-Dot3,
+#swinburne-FriendRadio4:checked~.swinburne-FriendDot #swinburne-Dot4{
+    background-color: white;
+}
+/*Timetable*/
+#swinburne-Card4{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+.swinburne-Timetable{
+    margin-inline: 3rem;
+    max-height: 65%;
+    overflow-x: auto;
+    border-radius: 1rem;
+    position: relative;
+}
+#swinburne-Card4 table{
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #3e3e3e;
+    color: white;
+}
+#swinburne-Card4 th, #swinburne-Card4 td, #swinburne-Card4 caption{
+    padding: .7rem;
+}
+#swinburne-Card4 th,#swinburne-Card4 caption{
+    text-align: left;
+}
+#swinburne-Card4 h3{
+    margin-top: 5rem;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+#swinburne-Card4 caption{
+    background-color: rgba(255, 255, 255, 0.4);
+}
+#swinburne-Card4 th{
+    background-color: grey;
+}
+.swinburne-StickyCell{
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: grey;
+}
+#swinburne-TimetableNetwork{
+    background-color: #2D3250;
+}
+#swinburne-TimetableProject{
+    background-color: #424769;
+}
+#swinburne-TimetableVovinam{
+    background-color: #F6B17A;
+}
+#swinburne-TimetableWebDev{
+    background-color: #7077A1;
+}
+#swinburne-Card4 th, #swinburne-Card4 td{
+    border: .1rem solid rgb(66, 66, 66);
+}
+.swinburne-TimetableTooltip{
+    position: relative;
+    padding: .5rem;
+}
+.swinburne-TimetableTooltipText{
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%) translateY(-90%);
+    background-color: #fff9;
+    backdrop-filter: blur(1rem);
+    color: black;
+    white-space: nowrap;
+    padding: .1rem .2rem;
+    border-radius: .5rem;
+    font-size: 1rem;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 11;
+}
+.swinburne-TimetableTooltipText::before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    border: 15px solid;
+    border-color: #fff9 #0000 #0000 #0000;
+    z-index: 11;
+}
+.swinburne-TimetableUnit:hover .swinburne-TimetableTooltipText{
+    visibility: visible;
+    opacity: 1;
+}
+.swinburne-TimetableUnit:hover{
+    background-color: #303555;
+}
+.swinburneTimetableRadio{
+    display: none;
+}
+#swinburne-NavigationTimetable{
+    display: none;
+}
+#swinburne-NavigationTimetable label{
+    background-color: rgba(105, 103, 83,.8);
+    padding: .1rem .2rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+/*******************/
+/*Hometown Page*/
+/*******************/
+/*Header*/
+.hometown-Header{
+    width: 100%;
+    height: 110vh;
+    position: relative;
+    overflow: hidden;
+    background-color: #d6d5c2;
+}
+.hometown-HeaderGif{
+    width: 100%;
+    height: 100%;
+    opacity: .2;
+    z-index: 0;
+}
+.hometown-HeaderText{
+    position: absolute;
+    width: 80%;
+    z-index: 0;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    opacity: 0;
+    animation: hometown-AnimationTextFadeIn 1s forwards 3s,hometown-AnimationHeaderText 1s alternate infinite steps(8) 3s;
+}
+@keyframes hometown-AnimationTextFadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes hometown-AnimationHeaderText {
+    0%{left: 50%; top: 20%;}
+    50%{left: 50.1%; top: 20.2%;}
+    100%{left: 50%; top: 20%;}
+}
+.hometown-HeaderText h1{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+    font-size: 8vw;
+    margin-bottom: 0;
+}
+.hometown-HeaderText h2{
+    color: white;
+    font-size: 3vw;
+    margin-top: .5rem;
+}
+.hometown-HeaderBenThanhMarket{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    animation: hometown-AnimationBenThanhGoIn 2s forwards, hometown-AnimationBenThanh 1s alternate infinite steps(8) 3s;
+}
+@keyframes hometown-AnimationBenThanhGoIn {
+    0%{
+        top: 100%;
+    }
+    100%{
+        top: 55%;
+    }
+}
+@keyframes hometown-AnimationBenThanh {
+    0%{left: 50%; top: 55%;}
+    50%{left: 50%; top: 54.7%;}
+    100%{left: 50%; top: 55%;}
+}
+.hometown-HeaderBanhMi img{
+    width: 90%;
+}
+.hometown-HeaderBanhMi{
+    width: 10%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 52%;
+    left: 70%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    animation: hometown-AnimationBanhMiGoIn 1s forwards 2s,hometown-AnimationBanhMi 1s alternate infinite steps(5) 3s;
+}
+@keyframes hometown-AnimationBanhMiGoIn{
+    0%{
+        left: 60%;
+        opacity: 0;
+    }
+    20%{
+        opacity: 1;
+    }
+    100%{
+        left: 70%;
+        opacity: 1;
+    }
+}
+@keyframes hometown-AnimationBanhMi {
+    0%{left: 70%; top: 52%;}
+    50%{left: 70.1%; top: 51.1%;}
+    100%{left: 70%; top: 52%;}
+}
+.hometown-HeaderOrangeCircle{
+    position: absolute;
+    top: 55%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    background: #FF3600;
+    width: 17%;
+    height: 0;
+    padding-top: 17%;
+    border-radius: 50%;
+    opacity: 0;
+    animation: hometown-AnimationOrangeCircleGoIn 1s forwards 2s,hometown-AnimationOrangeCircle 1s alternate infinite steps(8) 3s;
+}
+@keyframes hometown-AnimationOrangeCircleGoIn{
+    0%{
+        left: 50%;
+        top: 60%;
+        opacity: 0;
+    }
+    20%{
+        opacity: 1;
+    }
+    100%{
+        left: 45%;
+        top: 55%;
+        opacity: 1;
+    }
+}
+@keyframes hometown-AnimationOrangeCircle {
+    0%{left: 45%; top: 55%;}
+    50%{left: 45.2%; top: 55%;}
+    100%{left: 45%; top: 55%;}
+}
+.hometown-HeaderIllustration{
+    width: 140%;
+    height: 100%;
+    /*min-width: 1200px;*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/*Welcome and Architecture*/
+.hometown-WelcomeAndArchitecture{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    height: 1300px;
+}
+.hometown-Welcome{
+    display: flex;
+    padding: 4rem 1rem 1rem 1rem;
+    position: relative;
+    height: 20%;
+}
+.hometown-WelcomeText1{
+    width: 70%;
+    padding-right: 5%;
+    text-align: center;
+    align-self: center;
+}
+.hometown-WelcomeText1 h3{
+    font-size: 4vw;
+    white-space: nowrap;
+    margin-bottom: 0;
+    margin-top: 3%;
+}
+.hometown-WelcomeText1 h4{
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+.hometown-WelcomeText2{
+    padding-left: 5%;
+    border-left: 5px solid #C4C3B3;
+    align-self: center;
+}
+.hometown-WelcomeText2 p{
+    text-align: justify;
+}
+.hometown-Architecture{
+    height: 40%;
+    position: relative;
+}
+.hometown-Architecture h3{
+    text-transform: uppercase;
+    font-size: 3rem;
+    background: linear-gradient(90deg, #C4C3B3,#8E8B70);
+    background-clip: text;
+    color: transparent;
+}
+.hometown-ArchitectureCardContainerDiv{
+    display: flex;
+    justify-content: center;
+}
+.hometown-ArchitectureCardContainer{
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: row;
+   flex-wrap: wrap; 
+   gap: 4rem 3rem;
+   padding-block: 0rem 3rem;
+}
+.hometown-ArchitectureCard{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 13rem;
+    height: 13rem;
+    background: #8E8B70;
+    border-radius: .8rem;
+    transition: 0.5s;
+}
+.hometown-ArchitectureCard:nth-child(2){
+    background: #545242;
+}
+.hometown-ArchitectureCard:hover{
+    height: 17rem;
+}
+.hometown-ArchitectureImg{
+    position: absolute;
+    top: 1rem;
+    width: 10rem;
+    height: 8rem;
+    background: white;
+    border-radius: 1rem;
+    transition: 0.5s;
+    overflow: hidden;
+}
+.hometown-ArchitectureCard:hover .hometown-ArchitectureImg{
+    top: -4rem;
+    transform: scale(0.8);
+}
+.hometown-ArchitectureImg img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.hometown-ArchitectureContent{
+    position: absolute;
+    top: 8.5rem;
+    width: 100%;
+    height: 3rem;
+    padding: 0 2rem;
+    text-align: center;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.hometown-ArchitectureContent p{
+    padding-inline: 1rem;
+    margin-top: 0;
+}
+.hometown-ArchitectureCard:hover .hometown-ArchitectureContent{
+    top: 4rem;
+    height: 15rem;
+}
+.hometown-ArchitectureContent h4{
+    font-size: 1.2rem;
+    padding-block: 1.2rem 0;
+    margin-block: 0;
+}
+.hometown-Quotes{
+    background-color: #C4C3B3;
+    padding: 1rem;
+    color: #1D1F1E;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 1rem;
+    margin-block: 1rem 4rem
+}
+.hometown-Quotes blockquote{
+    font-size: 1.2rem;
+    text-align: justify;
+}
+/*Tourist Attraction Map*/
+.hometown-TouristAttractionsMap{
+    background-color: #2A2B2A;
+    padding: 2rem;
+}
+.hometown-TouristAttractionsMap h3{
+    text-align: left;
+    margin-bottom: 0;
+    margin-left: 5%;
+    font-size: 3rem;
+    background: linear-gradient(90deg, #C4C3B3,#8E8B70);
+    background-clip: text;
+    color: transparent;
+}
+.hometown-TouristAttractionsMap p{
+    margin-left: 5%;
+    font-size: 1.2rem;
+    margin-block: 0;
+    margin-bottom: 1rem;
+}
+#hometownTouristAttractionsMap-Warning{
+    font-size: .8rem;
+    opacity: 0.8;
+}
+.hometown-ImageMap{
+    display: flex;
+    justify-content: center;
+    overflow: auto;
+}
+.hometown-ImageMap img{
+    border: 1rem solid #353535;
+    border-radius: 1rem;
+    align-self: flex-start;
+}
+.hometown-ImageMapList{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding-inline: 2rem;
+    margin-top: 1rem;
+}
+.hometown-ImageMapListElement{
+    transition: background-color .5s;
+    padding: .2rem .5rem;
+    border-radius: 1rem;
+}
+.hometown-ImageMapListElement p{
+    padding-block: 1rem;
+}
+.hometown-ImageMapListElement h4{
+    border-top: 2px solid white;
+    font-size: 1.3rem;
+    width: fit-content;
+}
+.hometown-ImageMapListElement:target {
+    background-color: #464640;
+    scroll-margin-top: 6rem;
+}
+/*Food anf Fact*/
+.hometown-FoodandFact, .hometown-Tips{
+    padding: 5rem 10%;
+}
+.hometown-HCMFunFact{
+    position: relative;
+    padding: 3rem;
+    background-color: #C4C3B3;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-self: center;
+    border-radius: 1rem;
+    margin-bottom: 3rem;
+}
+.hometown-HCMFunFact p{
+    max-width: 70rem;
+    align-self: center;
+    text-align: justify;
+    color: #1D1F1E;
+}
+.hometown-HCMFunFact h3{
+    margin: 0;
+    font-size:3rem;
+    color: #1D1F1E;
+}
+.hometown-HCMFoodHeading{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3rem;
+}
+.hometown-HCMFood h3{
+    font-size: 5rem;
+    background: linear-gradient(90deg, #C4C3B3,#8E8B70);
+    background-clip: text;
+    color: transparent;
+    text-align: left;
+    margin-block: 0;
+    width: fit-content;
+}
+.hometown-FoodLeadingLine{
+    width: 100%;
+    height: 1rem;
+    background: #C4C3B3;
+    display: inline-block;
+}
+.hometown-HCMFoodContainer{
+    display: flex;
+    gap: 3rem;
+}
+.hometown-HCMFoodContainer img{
+    width: 20rem;
+    align-self: center;
+    justify-self: center;
+    animation: hometown-PhoRotate 10s infinite linear;
+}
+@keyframes hometown-PhoRotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.hometown-HCMFoodContainer p{
+    max-width: 100rem;
+    align-self: center;
+    justify-self: center;
+    text-align: justify;
+}
+/*Essential Tips for an Unforgettable Experience*/
+.hometown-Tips{
+    background-color: #2A2B2A;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    flex-direction: column;
+}
+.hometown-Tips h3{
+    font-size: 3rem;
+    background: linear-gradient(90deg, #C4C3B3,#8E8B70);
+    background-clip: text;
+    color: transparent;
+    text-transform: uppercase;
+    text-align: center;
+}
+.hometown-MasonaryBoxDiv{
+    align-self: center;
+    position: relative;
+    width: 100%;
+    max-width: 91rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+    grid-template-rows: minmax(7rem, auto);
+    gap: .5rem;
+    margin: 3rem;
+    grid-auto-flow: dense;
+}
+.hometown-TipBox{
+    color: white;
+    background: #545242;
+    padding: 1rem;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    transition: 0.5s;
+}
+.hometown-TipBox:hover{
+    background: rgb(71, 104, 53);
+}
+.hometown-TipBox ion-icon{
+    font-size: 2rem;
+}
+.hometown-TipBox:nth-child(1){
+    grid-column: span 2;
+    grid-row: span 1;
+}
+.hometown-TipBox:nth-child(2){
+    grid-column: span 1;
+    grid-row: span 2;
+}
+.hometown-TipBox:nth-child(4){
+    grid-column: span 1;
+    grid-row: span 2;
+}
+.hometown-TipBox:nth-child(5){
+    grid-column: span 3;
+    grid-row: span 1;
+}
+/*See You*/
+.hometown-SeeYouAgain{
+    padding-block: 0rem 5rem;
+}
+.hometown-SeeYouAgain h3{
+    text-align: center;
+    font-size: 5rem;
+    background: linear-gradient(90deg, #C4C3B3,#8E8B70);
+    background-clip: text;
+    color: transparent;
+}
+.hometown-WelcomeAndArchitectureAside{
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.hometown-WelcomeAndArchitectureAside img{
+    width: 500px;
+    object-fit: cover;
+}
+/*******************/
+/*Animation Page*/
+/*******************/
+.animation-Header{
+    text-align: center;
+    padding: 8rem 3rem;
+    background-image: url(images/Animation/animation-Background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-shadow: -2px -2px 50px rgba(255, 255, 255, 0.5)
+}
+.animation-Header h1{
+    font-size: 4rem;
+    background: linear-gradient(90deg, #C4C3B3,#8E8B70);
+    background-clip: text;
+    color: transparent;
+}
+.animation-ListAnimation section{
+    height: fit-content;
+    padding-inline: 5rem;
+    padding-block: 5rem;
+}
+.animation-ListAnimationContent h2{
+    font-size: 2rem;
+    background: linear-gradient(90deg, #C4C3B3,#8E8B70);
+    background-clip: text;
+    color: transparent; 
+}
+.animation-ListAnimation section:nth-child(2n) h2{
+    background: linear-gradient(-90deg, #C4C3B3,#8E8B70);
+    background-clip: text;
+    color: transparent; 
+}
+.animation-ListAnimationContent a{
+    font-size: 1.5rem;
+    color: white;
+}
+.animation-ListAnimationContent a:hover{
+    color: rgb(160, 160, 160);
+}
+.animation-ListAnimationContent a:visited{
+    color: #bdb997;
+}
+.animation-ListAnimation{
+    text-align: left;
+}
+.animation-ListAnimation section:nth-child(2n){
+    text-align: right;
+    background-color: #2A2B2A;
+}
+#home-Quotes:target, #home-ThreeVersionOfMyself:target, #hometown-HCMFood:target{
+    scroll-margin-top: 7rem;
+}
+#achievement-Timeline:target{
+    scroll-margin-block: 5rem;
+}
+/*Footer*/
+footer{
+    width: 100%;
+    background: rgb(18, 18, 18);
+    color: white;
+    padding: 6rem 0 2rem;
+    border-top-left-radius: 10vw;
+    border-top-right-radius: 10vw;
+    line-height: 1.5rem;
+}
+.footer-Div{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.footer-LogoSet{
+    position: relative;
+}
+.footer-TextLogo{
+    font-family: Poppins, sans-serif;
+    font-size: 2rem;
+}
+.footer-Column{
+    flex-basis: 10%;
+    padding: 1rem;
+}
+.footer-Logo{
+    width: 5rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    opacity: .9;
+    z-index: 10;
+}
+.footer-Column h4{
+    font-size: 1.2rem;
+    width: fit-content;
+    margin-bottom: 2rem;
+    position: relative;
+}
+.footer-Mail{
+    width: fit-content;
+    color: white;
+}
+.footer-PhoneNumber{
+    width: fit-content;
+    color: white;
+    text-decoration: none;
+}
+.footer-Links{
+   padding-left: 0;
+}
+.footer-Links li{
+    list-style: none;
+    margin-bottom: 1rem;
+    list-style: none;
+}
+.footer-Links a{
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+.footer-Links a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: white;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 250ms ease-in;
+}
+.footer-Links a:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+.footer-Column form{
+    padding-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 0.1rem solid #ccc;
+    margin-bottom: 3rem;
+}
+.footer-Column ion-icon{
+    font-size: 1.2rem;
+    margin-right: .5rem;
+}
+.footer-MailForm{
+    width: 10rem;
+    background: transparent;
+    color: #ccc;
+    border: 0;
+    outline: none;
+}
+.footer-Column button{
+    background: transparent;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+.footer-SubmitButton{
+    color: white;
+}
+.footer-SocialMedia ion-icon{
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    color: rgb(172, 172, 172);
+}
+.footer-SocialMedia ion-icon:hover{
+    color: white;
+}
+footer hr{
+    width: 90%;
+    border: 0;
+    border-bottom: .1rem solid rgb(175, 175, 175);
+    margin: 1rem auto;
+}
+.footer-Copyright{
+    text-align: center;
+    font-size: .8rem;
+    padding-inline: 1rem;
+}
